@@ -13,11 +13,15 @@ include_directories(./Src/)
 include_directories("${CMAKE_BINARY_DIR}/../Pch/Include/")
 
 set(HEADERS
-    ./src/core/Defines.h
+    ./src/Core/Defines.h
+    ./src/Core/Updatable.h
+    ./src/Utils/Math.h
+    ./src/Utils/Types.h
 )
 
 set(SOURCES
-    ./src/Main.cc
+    ./Src/Main.cc
+    ./Src/Core/App.cc
 )
 
 if(NOT CMAKE_BUILD_TYPE)

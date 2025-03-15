@@ -18,14 +18,30 @@
  */
 
 
+#include "Utils/Math.h"
+#include "Utils/Types.h"
 #include "Core/App.h"
 
 namespace Peanut{
     uint16_t App::init(int16_t argc, char** argv) noexcept{
+        std::string str = "547";
+        uint16_t num = cast<uint16_t, std::string>(str);
+        
+        std::cout << num << std::endl;
         return PEANUT_NO_ERROR;
     }
 
-    void App::start() noexcept{
+    void App::start(bool& stop) noexcept{
+        Updatable* current_task = nullptr;
+
+        while(!stop){
+            if(_update_queue.size() > 0){
+                current_task = _update_queue.front();
+                _update_queue.pop();
+                current_task->update();
+                _update_queue.push(current_task);
+            }
+        }
         return;
     }
 }

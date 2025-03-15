@@ -9,6 +9,8 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 project(Pch)
 
+include_directories(./Include/)
+
 set(HEADERS
     ./Include/Pch/Pch.h
 )

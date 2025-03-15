@@ -18,21 +18,23 @@
  */
 
 
+#ifndef PEANUT_CORE_UPDATABLE_H_
+#define PEANUT_CORE_UPDATABLE_H_
+
+#include "Pch/Pch.h"
+
 #include "Core/Defines.h"
-#include "Core/App.h"
 
-int main(int argc, char** argv) noexcept{
-    Peanut::App* app = new Peanut::App();
-    bool* glstop = new bool;
-    *glstop = false;
+namespace Peanut{
+    class Updatable{
+    public:
+        virtual void update() = 0;
 
-    if(app->init(argc, argv) != PEANUT_NO_ERROR){
-        exit(1);
-    }
+    protected:
+        Updatable() = default;
 
-    app->start(*glstop);
-
-    delete app;
-    delete glstop;
-    return 0;
+        ~Updatable() = default;
+    };
 }
+
+#endif

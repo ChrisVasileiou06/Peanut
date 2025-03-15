@@ -1,14 +1,20 @@
 [
 {
   "directory": "S:/dev/projects/Peanut/build",
-  "command": "S:\\dev\\compilers\\gcc14.2.0\\bin\\g++.exe -g -std=gnu++17 -o Pch\\CMakeFiles\\Pch.dir\\Src\\Pch.cc.obj -c S:\\dev\\projects\\Peanut\\Pch\\Src\\Pch.cc",
+  "command": "S:\\dev\\compilers\\gcc14.2.0\\bin\\g++.exe -IS:/dev/projects/Peanut/Pch/./Include -g -std=gnu++17 -o Pch\\CMakeFiles\\Pch.dir\\Src\\Pch.cc.obj -c S:\\dev\\projects\\Peanut\\Pch\\Src\\Pch.cc",
   "file": "S:\\dev\\projects\\Peanut\\Pch\\Src\\Pch.cc",
   "output": "Pch\\CMakeFiles\\Pch.dir\\Src\\Pch.cc.obj"
 },
 {
   "directory": "S:/dev/projects/Peanut/build",
-  "command": "S:\\dev\\compilers\\gcc14.2.0\\bin\\g++.exe -IS:/dev/projects/Peanut/Peanut/./Src -IS:/dev/projects/Peanut/build/../Pch/Include -g -std=gnu++17 -o Peanut\\CMakeFiles\\Peanut.dir\\src\\Main.cc.obj -c S:\\dev\\projects\\Peanut\\Peanut\\src\\Main.cc",
-  "file": "S:\\dev\\projects\\Peanut\\Peanut\\src\\Main.cc",
-  "output": "Peanut\\CMakeFiles\\Peanut.dir\\src\\Main.cc.obj"
+  "command": "S:\\dev\\compilers\\gcc14.2.0\\bin\\g++.exe -IS:/dev/projects/Peanut/Peanut/./Src -IS:/dev/projects/Peanut/build/../Pch/Include -g -std=gnu++17 -o Peanut\\CMakeFiles\\Peanut.dir\\Src\\Main.cc.obj -c S:\\dev\\projects\\Peanut\\Peanut\\Src\\Main.cc",
+  "file": "S:\\dev\\projects\\Peanut\\Peanut\\Src\\Main.cc",
+  "output": "Peanut\\CMakeFiles\\Peanut.dir\\Src\\Main.cc.obj"
+},
+{
+  "directory": "S:/dev/projects/Peanut/build",
+  "command": "S:\\dev\\compilers\\gcc14.2.0\\bin\\g++.exe -IS:/dev/projects/Peanut/Peanut/./Src -IS:/dev/projects/Peanut/build/../Pch/Include -g -std=gnu++17 -o Peanut\\CMakeFiles\\Peanut.dir\\Src\\Core\\App.cc.obj -c S:\\dev\\projects\\Peanut\\Peanut\\Src\\Core\\App.cc",
+  "file": "S:\\dev\\projects\\Peanut\\Peanut\\Src\\Core\\App.cc",
+  "output": "Peanut\\CMakeFiles\\Peanut.dir\\Src\\Core\\App.cc.obj"
 }
 ]

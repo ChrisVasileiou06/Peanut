@@ -1,0 +1,8 @@
+# ninja log v6
+19	976	7637519627768377	Peanut/CMakeFiles/Peanut.dir/Src/Main.cc.obj	360372856ea907
+10	905	7637519235429045	Pch/CMakeFiles/Pch.dir/Src/Pch.cc.obj	3bcf69953ed2db0e
+905	2993	7637519244372533	S:/dev/projects/Peanut/bin/libPch.a	c811dc36564ed1b9
+14	984	7637520553594419	Peanut/CMakeFiles/Peanut.dir/Src/Core/App.cc.obj	3c625eeed8300cd9
+984	1086	7637520563294684	S:/dev/projects/Peanut/bin/Peanut.exe	1d1912defa3573d6
+17	1042	7637520704362525	Peanut/CMakeFiles/Peanut.dir/Src/Core/App.cc.obj	3c625eeed8300cd9
+1043	1133	7637520714621031	S:/dev/projects/Peanut/bin/Peanut.exe	1d1912defa3573d6

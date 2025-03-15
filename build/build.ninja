@@ -82,6 +82,7 @@ build Pch/CMakeFiles/Pch.dir/Src/Pch.cc.obj: CXX_COMPILER__Pch_unscanned_Debug S
   CONFIG = Debug
   DEP_FILE = Pch\CMakeFiles\Pch.dir\Src\Pch.cc.obj.d
   FLAGS = -g -std=gnu++17
+  INCLUDES = -IS:/dev/projects/Peanut/Pch/./Include
   OBJECT_DIR = Pch\CMakeFiles\Pch.dir
   OBJECT_FILE_DIR = Pch\CMakeFiles\Pch.dir\Src
 
@@ -140,13 +141,21 @@ build Pch/rebuild_cache: phony Pch/CMakeFiles/rebuild_cache.util
 
 build cmake_object_order_depends_target_Peanut: phony || cmake_object_order_depends_target_Pch
 
-build Peanut/CMakeFiles/Peanut.dir/src/Main.cc.obj: CXX_COMPILER__Peanut_unscanned_Debug S$:/dev/projects/Peanut/Peanut/src/Main.cc || cmake_object_order_depends_target_Peanut
+build Peanut/CMakeFiles/Peanut.dir/Src/Main.cc.obj: CXX_COMPILER__Peanut_unscanned_Debug S$:/dev/projects/Peanut/Peanut/Src/Main.cc || cmake_object_order_depends_target_Peanut
   CONFIG = Debug
-  DEP_FILE = Peanut\CMakeFiles\Peanut.dir\src\Main.cc.obj.d
+  DEP_FILE = Peanut\CMakeFiles\Peanut.dir\Src\Main.cc.obj.d
   FLAGS = -g -std=gnu++17
   INCLUDES = -IS:/dev/projects/Peanut/Peanut/./Src -IS:/dev/projects/Peanut/build/../Pch/Include
   OBJECT_DIR = Peanut\CMakeFiles\Peanut.dir
-  OBJECT_FILE_DIR = Peanut\CMakeFiles\Peanut.dir\src
+  OBJECT_FILE_DIR = Peanut\CMakeFiles\Peanut.dir\Src
+
+build Peanut/CMakeFiles/Peanut.dir/Src/Core/App.cc.obj: CXX_COMPILER__Peanut_unscanned_Debug S$:/dev/projects/Peanut/Peanut/Src/Core/App.cc || cmake_object_order_depends_target_Peanut
+  CONFIG = Debug
+  DEP_FILE = Peanut\CMakeFiles\Peanut.dir\Src\Core\App.cc.obj.d
+  FLAGS = -g -std=gnu++17
+  INCLUDES = -IS:/dev/projects/Peanut/Peanut/./Src -IS:/dev/projects/Peanut/build/../Pch/Include
+  OBJECT_DIR = Peanut\CMakeFiles\Peanut.dir
+  OBJECT_FILE_DIR = Peanut\CMakeFiles\Peanut.dir\Src\Core
 
 
 # =============================================================================
@@ -156,7 +165,7 @@ build Peanut/CMakeFiles/Peanut.dir/src/Main.cc.obj: CXX_COMPILER__Peanut_unscann
 #############################################
 # Link the executable S:\dev\projects\Peanut\bin\Peanut.exe
 
-build S$:/dev/projects/Peanut/bin/Peanut.exe: CXX_EXECUTABLE_LINKER__Peanut_Debug Peanut/CMakeFiles/Peanut.dir/src/Main.cc.obj | S$:/dev/projects/Peanut/bin/libPch.a || S$:/dev/projects/Peanut/bin/libPch.a
+build S$:/dev/projects/Peanut/bin/Peanut.exe: CXX_EXECUTABLE_LINKER__Peanut_Debug Peanut/CMakeFiles/Peanut.dir/Src/Main.cc.obj Peanut/CMakeFiles/Peanut.dir/Src/Core/App.cc.obj | S$:/dev/projects/Peanut/bin/libPch.a || S$:/dev/projects/Peanut/bin/libPch.a
   CONFIG = Debug
   FLAGS = -g
   LINK_LIBRARIES = S:/dev/projects/Peanut/bin/libPch.a  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32

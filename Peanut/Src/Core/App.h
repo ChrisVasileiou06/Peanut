@@ -24,13 +24,17 @@
 #include "Pch/Pch.h"
 
 #include "Core/Defines.h"
+#include "Core/Updatable.h"
 
 namespace Peanut{
     class App{
     public:
         uint16_t init(int16_t argc, char** argv) noexcept;
 
-        void start() noexcept;
+        void start(bool& stop) noexcept;
+
+    private:
+        std::queue<Updatable*> _update_queue;
     };
 }
 
