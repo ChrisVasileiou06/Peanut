@@ -1,0 +1,123 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.50"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "Pch",
+					"jsonFile" : "directory-Pch-Debug-e7f42bcd25925986ad14.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.50"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 1,
+					"source" : "Pch",
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"build" : "Peanut",
+					"jsonFile" : "directory-Peanut-Debug-d8b450634c3cd27380c0.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.50"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 2,
+					"source" : "Peanut",
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Project"
+				},
+				{
+					"directoryIndexes" : 
+					[
+						1
+					],
+					"name" : "Pch",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						0
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						2
+					],
+					"name" : "Peanut",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						1
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "Pch::@a0050fc5ab6ed2465492",
+					"jsonFile" : "target-Pch-Debug-d19f15a3679c12c14b33.json",
+					"name" : "Pch",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "Peanut::@57f9783874d2597f20ec",
+					"jsonFile" : "target-Peanut-Debug-b1c5a0c229c13bee1b14.json",
+					"name" : "Peanut",
+					"projectIndex" : 2
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "S:/dev/projects/Peanut/build",
+		"source" : "S:/dev/projects/Peanut"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}

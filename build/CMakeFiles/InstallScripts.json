@@ -1,0 +1,9 @@
+{
+	"InstallScripts" : 
+	[
+		"S:/dev/projects/Peanut/build/cmake_install.cmake",
+		"S:/dev/projects/Peanut/build/Pch/cmake_install.cmake",
+		"S:/dev/projects/Peanut/build/Peanut/cmake_install.cmake"
+	],
+	"Parallel" : false
+}
