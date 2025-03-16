@@ -18,16 +18,15 @@
  */
 
 
-#include "Utils/Math.h"
-#include "Utils/Types.h"
 #include "Core/App.h"
 
 namespace Peanut{
     uint16_t App::init(int16_t argc, char** argv) noexcept{
-        std::string str = "547";
-        uint16_t num = cast<uint16_t, std::string>(str);
-        
-        std::cout << num << std::endl;
+        Event<uint16_t>* ev = new Event<uint16_t>(EventType::INTERNAL);
+
+        ev->set_repeat(false);
+        ev->set_args("set twitter 'AFt2-5d' -safe");
+        std::cout << ev->to_string() << std::endl;
         return PEANUT_NO_ERROR;
     }
 

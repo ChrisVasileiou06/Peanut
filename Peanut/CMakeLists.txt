@@ -18,6 +18,7 @@ set(HEADERS
     ./src/Utils/Math.h
     ./src/Utils/Types.h
     ./src/Events/EventInterface.h
+    ./src/Events/Event.h
 )
 
 set(SOURCES

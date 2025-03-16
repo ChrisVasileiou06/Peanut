@@ -26,6 +26,7 @@
 #include "Utils/Math.h"
 #include "Utils/Types.h"
 #include "Utils/Timer.h"
+
 #include "Core/Defines.h"
 
 namespace Peanut{
@@ -35,13 +36,50 @@ namespace Peanut{
         USER = 2
     };
 
+    template <>
+    inline std::string cast<std::string, EventType>(const EventType& x){
+        switch(x){
+            case EventType::NONE:
+            return "None";
+            break;
+            case EventType::INTERNAL:
+            return "Internal";
+            break;
+            case EventType::USER:
+            return "User";
+            break;
+            default:
+            return "-";
+            break;
+        }
+    }
+
+    struct EventAttrs{
+        EventType type = EventType::NONE;
+        bool repeat = false;
+        bool async = false;
+    };
+
     class EventInterface{
     public:
         EventInterface(const EventType& evtype);
 
+        EventInterface(const EventAttrs& attrs);
+
         virtual ~EventInterface();
 
-        virtual void dispatch() noexcept;
+        virtual void dispatch();
+
+        const bool& repeat() const noexcept;
+
+        const bool& async() const noexcept;
+
+        void set_repeat(bool x) noexcept;
+
+        void set_async(bool x) noexcept;
+
+    protected:
+        EventAttrs _attrs;
 
     private:
         Timer<float> _timer;

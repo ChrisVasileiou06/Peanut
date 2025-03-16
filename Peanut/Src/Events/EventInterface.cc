@@ -26,12 +26,37 @@ namespace Peanut{
         return;
     }
 
+    EventInterface::EventInterface(const EventAttrs& attrs){
+        _attrs.type = attrs.type;
+        _attrs.repeat = attrs.repeat;
+        _attrs.async = attrs.async;
+        return;
+    }
+
     EventInterface::~EventInterface(){
         return;
     }
 
-    void EventInterface::dispatch() noexcept{
+    void EventInterface::dispatch(){
         exit(1);
+        return;
+    }
+
+    const bool& EventInterface::repeat() const noexcept{
+        return _attrs.repeat;
+    }
+
+    const bool& EventInterface::async() const noexcept{
+        return _attrs.async;
+    }
+
+    void EventInterface::set_repeat(bool x) noexcept{
+        _attrs.repeat = x;
+        return;
+    }
+
+    void EventInterface::set_async(bool x) noexcept{
+        _attrs.async = x;
         return;
     }
 }

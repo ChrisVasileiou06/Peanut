@@ -32,6 +32,16 @@ namespace Peanut{
     }
 
     template <>
+    inline std::string cast<std::string, bool>(const bool& x){
+        if(x){
+            return "True";
+        }
+        else{
+            return "False";
+        }
+    }
+
+    template <>
     inline uint16_t cast<uint16_t, std::string>(const std::string& x){
         uint16_t res = 0;
 

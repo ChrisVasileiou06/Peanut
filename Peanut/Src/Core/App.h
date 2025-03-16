@@ -23,8 +23,13 @@
 
 #include "Pch/Pch.h"
 
+#include "Utils/Math.h"
+#include "Utils/Types.h"
+
 #include "Core/Defines.h"
 #include "Core/Updatable.h"
+
+#include "Events/Event.h"
 
 namespace Peanut{
     class App{
