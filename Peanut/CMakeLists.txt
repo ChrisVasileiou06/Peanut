@@ -13,17 +13,19 @@ include_directories(./Src/)
 include_directories("${CMAKE_BINARY_DIR}/../Pch/Include/")
 
 set(HEADERS
-    ./src/Core/Defines.h
-    ./src/Core/Updatable.h
-    ./src/Utils/Math.h
-    ./src/Utils/Types.h
-    ./src/Events/EventInterface.h
-    ./src/Events/Event.h
+    ./Src/Core/Defines.h
+    ./Src/Core/Updatable.h
+    ./Src/Core/Data.h
+    ./Src/Utils/Math.h
+    ./Src/Utils/Types.h
+    ./Src/Events/EventInterface.h
+    ./Src/Events/Event.h
 )
 
 set(SOURCES
     ./Src/Main.cc
     ./Src/Core/App.cc
+    ./Src/Core/Data.cc
     ./Src/Events/EventInterface.cc
 )
 

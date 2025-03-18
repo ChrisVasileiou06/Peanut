@@ -18,15 +18,29 @@
  */
 
 
-#ifndef PEANUT_CORE_DEFINES_H_
-#define PEANUT_CORE_DEFINES_H_
+#ifndef PEANUT_CORE_DATA_STRUCT_H_
+#define PEANUT_CORE_DATA_STRUCT_H_
 
 #include "Pch/Pch.h"
 
-#define PEANUT_NO_ERROR uint16_t(0)
+#include "Core/Defines.h"
 
-#define PEANUT_DATA_INVALID_ID uint16_t(1000)
-#define PEANUT_DATA_INVALID_VALUE uint16_t(1001)
-#define PEANUT_DATA_ID_ALREADY_EXISTS uint16_t(1002)
+namespace Peanut{
+    class Data{
+    public:
+        Data() = default;
 
-#endif // PEANUT_CORE_DEFINES_H_
+        ~Data() = default;
+
+        uint16_t add(const std::string& id, const std::string& val) noexcept;
+
+        uint16_t set(const std::string& id, const std::string& val) noexcept;
+
+        uint16_t remove(const std::string& id) noexcept;
+
+    private:
+        std::map<std::string, std::string> _map;
+    };
+}
+
+#endif // PEANUT_CORE_DATA_STRUCT_H_

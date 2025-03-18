@@ -18,15 +18,33 @@
  */
 
 
-#ifndef PEANUT_CORE_DEFINES_H_
-#define PEANUT_CORE_DEFINES_H_
+#include "Core/Data.h"
 
-#include "Pch/Pch.h"
+namespace Peanut{
+    uint16_t Data::add(const std::string& id, const std::string& val) noexcept{
+        if(_map.count(id) > 0){
+            return PEANUT_DATA_ID_ALREADY_EXISTS;
+        }
 
-#define PEANUT_NO_ERROR uint16_t(0)
+        _map[id] = val;
+        return PEANUT_NO_ERROR;
+    }
 
-#define PEANUT_DATA_INVALID_ID uint16_t(1000)
-#define PEANUT_DATA_INVALID_VALUE uint16_t(1001)
-#define PEANUT_DATA_ID_ALREADY_EXISTS uint16_t(1002)
+    uint16_t Data::set(const std::string& id, const std::string& val) noexcept{
+        if(_map.count(id) == 0){
+            return PEANUT_DATA_INVALID_ID;
+        }
 
-#endif // PEANUT_CORE_DEFINES_H_
+        _map[id] = val;
+        return PEANUT_NO_ERROR;
+    }
+
+    uint16_t Data::remove(const std::string& id) noexcept{
+        if(_map.count(id) == 0){
+            return PEANUT_DATA_INVALID_ID;
+        }
+
+        _map.erase(id);
+        return PEANUT_NO_ERROR;
+    }
+}
