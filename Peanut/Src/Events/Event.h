@@ -30,7 +30,6 @@
 #include "Core/Defines.h"
 
 #include "Events/EventInterface.h"
-#include "Events/Event.h"
 
 namespace Peanut{
     template <typename _StructArgs>
@@ -83,7 +82,7 @@ namespace Peanut{
 
     private:    
         std::string _args;
-        std::function<void(const _StructArgs&)> _func;
+        std::function<void(_StructArgs&)> _func;
     };
 }
 
