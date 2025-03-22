@@ -23,6 +23,8 @@
 
 #include "Pch/Pch.h"
 
+#include "Utils/Types.h"
+
 #include "Core/Defines.h"
 
 namespace Peanut{
@@ -32,14 +34,49 @@ namespace Peanut{
 
         ~Data() = default;
 
-        uint16_t add(const std::string& id, const std::string& val) noexcept;
+        bool contains_id(const std::string& id) const noexcept;
 
-        uint16_t set(const std::string& id, const std::string& val) noexcept;
+        bool contains_value(const std::string& value) const;
 
-        uint16_t remove(const std::string& id) noexcept;
+        bool contains_value(const std::string& id, const std::string& value) const;
+
+
+        std::vector<std::string>& get(const std::string& id);
+
+        std::vector<std::string>& get(uint16_t pos);
+
+
+        uint16_t push_id(const std::string& id) noexcept;
+
+        uint16_t insert_id(const std::string& id, uint16_t pos);
+
+        uint16_t insert_id(const std::string& id, const std::string& pos_id); 
+        
+        uint16_t remove_id(uint16_t pos);
+
+        uint16_t remove_id(const std::string& id);
+
+        
+        uint16_t push_value(const std::string& id, const std::string& value) noexcept;
+
+        uint16_t insert_value(const std::string& id, const std::string& value, uint16_t pos);
+
+        uint16_t insert_value(const std::string& id, const std::string& value, const std::string& pos_value);
+
+        uint16_t remove_value(const std::string& id, uint16_t value_pos);
+
+        uint16_t remove_value(const std::string& id, const std::string& value);
+
+        std::vector<std::string>& operator[](const std::string& id);
+
+        std::vector<std::string>& operator[](uint16_t pos);
 
     private:
-        std::map<std::string, std::string> _map;
+        std::vector<std::string> _ids;
+        std::unordered_map<std::string, std::vector<std::string>> _map;
+
+    private:
+        bool _check_value(const std::string& value) noexcept;
     };
 }
 
